@@ -15,7 +15,7 @@ help:
 	@echo
 	@echo 'Usage:'
 	@echo '    make build           Compile the project.'
-	@echo '    make get-deps        runs dep ensure, mostly used for ci.'
+	@echo '    make deps            runs go mod tidy, mostly used for ci.'
 	@echo '    make build-alpine    Compile optimized for alpine linux.'
 	@echo '    make package         Build final docker image with just the go binary inside'
 	@echo '    make tag             Tag image created by package with latest, git commit and version'
@@ -29,8 +29,8 @@ build:
 	@echo "GOPATH=${GOPATH}"
 	go build -ldflags "-X github.com/arnour/spread/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/arnour/spread/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
 
-get-deps:
-	dep ensure
+deps:
+	go mod tidy
 
 build-alpine:
 	@echo "building ${BIN_NAME} ${VERSION}"

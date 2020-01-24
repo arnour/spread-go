@@ -2,6 +2,11 @@
 
 A library to calculate key-based hash distribution
 
+[![Build Status](https://travis-ci.org/arnour/spread.svg?branch=master)](https://travis-ci.org/arnour/spread)
+
+## Installation
+
+    $ go get https://github.com/arnour/spread
 
 ## Example Usage
 
@@ -21,4 +26,4 @@ fmt.Println(fraction) // 0.804535691348
 
 ### Testing
 
-``make test``
+    $ make test

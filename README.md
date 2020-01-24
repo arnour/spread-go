@@ -1,6 +1,6 @@
 # spread
 
-A library to calculate key-based hash distribution
+A library to calculate hashed-based key distribution
 
 [![Build Status](https://travis-ci.org/arnour/spread.svg?branch=master)](https://travis-ci.org/arnour/spread)
 

@@ -2,15 +2,21 @@
 
 A library to calculate key-based hash distribution
 
-## Getting started
 
-This project requires Go to be installed. On OS X with Homebrew you can just run `brew install go`.
+## Example Usage
 
-Running it then should be as simple as:
+```go
+// Create a spread instance
+spreader := spread.New(nil)
 
-```console
-$ make
-$ ./bin/spread
+// you could also use different hash implamentations
+// spreader := spread.New(sha256.New())
+
+keyValue := "my-key-to-hash"
+
+fraction := spreader.Key(keyValue)
+
+fmt.Println(fraction) // 0.804535691348
 ```
 
 ### Testing

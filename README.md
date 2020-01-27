@@ -6,7 +6,7 @@ A library to calculate hashed-based key distribution
 
 ## Installation
 
-    $ go get github.com/arnour/spread
+    $ go get github.com/arnour/spread-go
 
 ## Example Usage
 
